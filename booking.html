@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEST Coffee — Reserve a Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styleeval.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">BEST <span>Coffee</span></div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html" class="active">Reserve</a>
+    <a href="track.html">Track Order</a>
+    <a href="login.html">Login</a>
+    <a href="checkout.html" class="cart-link">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<div class="booking-page">
+
+  <div class="booking-hero">
+    <p class="label">Dine With Us</p>
+    <h1>Reserve a <em>Table</em></h1>
+    <p>Book your spot at BEST Coffee — walk in to a table that's already yours.</p>
+  </div>
+
+  <div class="booking-body">
+
+    <div class="booking-form-card">
+      <h2>Make a Reservation</h2>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="b-field">
+            <label>Full Name</label>
+            <input type="text" placeholder="ARA" required/>
+          </div>
+          <div class="b-field">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 9815009600" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="b-field">
+            <label>Date</label>
+            <input type="date" required/>
+          </div>
+          <div class="b-field">
+            <label>Time</label>
+            <input type="time" min="07:00" max="22:00" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="b-field">
+            <label>Number of Guests</label>
+            <select required>
+              <option value="">Select guests</option>
+              <option>1 person</option>
+              <option>2 people</option>
+              <option>3 people</option>
+              <option>4 people</option>
+              <option>5–8 people</option>
+              <option>More than 8</option>
+            </select>
+          </div>
+          <div class="b-field">
+            <label>Seating Preference</label>
+            <select>
+              <option>No preference</option>
+              <option>Indoor</option>
+              <option>Window seat</option>
+              <option>Corner table</option>
+            </select>
+          </div>
+        </div>
+        <div class="b-field">
+          <label>Special Requests (optional)</label>
+          <textarea rows="3" placeholder="Birthday, anniversary, dietary needs…"></textarea>
+        </div>
+        <button type="submit" class="book-submit">Confirm Reservation</button>
+      </form>
+    </div>
+
+    <div class="booking-info">
+      <h3>Good to Know</h3>
+      <div class="info-cards">
+        <div class="info-card">
+          <i class="fa-solid fa-clock"></i>
+          <h4>Opening Hours</h4>
+          <p>Mon–Fri 7am–9pm<br/>Sat–Sun 8am–10pm</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h4>Location</h4>
+          <p>Square 1, Chitkara University, Punjab, India</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-phone"></i>
+          <h4>Call Us</h4>
+          <p>+91 98150 09600<br/>hello@bestcoffee.in</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">BEST <span>Coffee</span></div>
+  <small>&copy; 2026 BEST Coffee, India. All rights reserved.</small>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

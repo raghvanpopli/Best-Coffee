@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEST Coffee — Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styleeval.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">BEST <span>Coffee</span></div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="track.html">Track Order</a>
+    <a href="login.html">Login</a>
+    <a href="checkout.html" class="cart-link">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<div class="checkout-wrapper">
+  <div class="checkout-container">
+    <h1>Your Order</h1>
+
+    <div id="cartItems"></div>
+
+    <div class="total-area">
+      <h2>Total: ₹<span id="totalPrice">0</span></h2>
+    </div>
+
+    <form id="paymentForm" class="payment-form">
+      <h2>Payment Method</h2>
+
+      <div class="payment-options">
+        <label class="payment-option">
+          <input type="radio" name="payment" value="UPI" checked/>
+          <span><i class="fa-solid fa-mobile-screen" style="margin-right:8px;color:var(--accent-lt);"></i>UPI Payment</span>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payment" value="Card"/>
+          <span><i class="fa-solid fa-credit-card" style="margin-right:8px;color:var(--accent-lt);"></i>Credit / Debit Card</span>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payment" value="COD"/>
+          <span><i class="fa-solid fa-money-bill-wave" style="margin-right:8px;color:var(--accent-lt);"></i>Cash on Delivery</span>
+        </label>
+      </div>
+
+      <!-- UPI -->
+      <div id="upiSection" class="payment-section">
+        <div class="field-group">
+          <label>UPI ID</label>
+          <input type="text" placeholder="example@upi"/>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div id="cardSection" class="payment-section" style="display:none;">
+        <div class="field-group">
+          <label>Card Number</label>
+          <input type="text" placeholder="0000 0000 0000 0000" maxlength="19"/>
+        </div>
+        <div class="field-group">
+          <label>Card Holder Name</label>
+          <input type="text" placeholder="Full Name"/>
+        </div>
+        <div class="card-row">
+          <div class="field-group">
+            <label>Expiry</label>
+            <input type="text" placeholder="MM/YY" maxlength="5"/>
+          </div>
+          <div class="field-group">
+            <label>CVV</label>
+            <input type="password" placeholder="•••" maxlength="4"/>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="confirm-btn">Confirm Payment</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">BEST <span>Coffee</span></div>
+  <small>&copy; 2026 BEST Coffee, India. All rights reserved.</small>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

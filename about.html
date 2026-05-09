@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEST Coffee — About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styleeval.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">BEST <span>Coffee</span></div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="login.html">Login</a>
+    <a href="checkout.html" class="cart-link">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<div class="about-page">
+
+  <!-- HERO -->
+  <div class="about-page-hero">
+    <p class="label">Our Story</p>
+    <h1>More Than Coffee,<br/><em>A Community</em></h1>
+    <p>Born on a university campus with a simple dream — to serve the finest cup of coffee
+       and create a space where ideas flourish over every sip.</p>
+  </div>
+
+  <!-- STORY SECTION 1 -->
+  <div class="about-section">
+    <div class="about-grid">
+      <div>
+        <p class="label">How It Began</p>
+        <h2>Passion in Every Bean</h2>
+        <div class="divider"></div>
+        <p>BEST Coffee started in 2014 as a tiny counter at Chitkara University's Square 1.
+           What began as a passion project between two friends quickly grew into the campus's
+           most beloved gathering spot.</p>
+        <p>We source our beans directly from small farms in Ethiopia, Coorg, and Colombia —
+           ensuring both quality and fair pay for the farmers who make it all possible.</p>
+        <p>Every roast, every blend, every cup carries that original spirit: honest craft,
+           genuine warmth, and an obsession with flavour.</p>
+        <div class="stats" style="margin-top:28px;">
+          <div><strong>12+</strong><span>Years Roasting</span></div>
+          <div><strong>30+</strong><span>Bean Origins</span></div>
+          <div><strong>5K+</strong><span>Happy Guests</span></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="coffee beans.png" alt="Coffee beans"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY SECTION 2 (alt bg) -->
+  <div class="about-section alt">
+    <div class="about-grid rev">
+      <div>
+        <p class="label" style="color:var(--accent-lt);">Our Philosophy</p>
+        <h2>Slow Coffee, Fast Smiles</h2>
+        <div class="divider"></div>
+        <p>We believe good coffee should never be rushed. Our baristas are trained to treat
+           every order as a craft, not a transaction. We steam, pull, and pour with intention.</p>
+        <p>From our seasonal specials to the daily espresso, every item on our menu is tested
+           rigorously before it earns a place in your cup.</p>
+      </div>
+      <div class="about-img">
+        <img src="hot brew.jpg" alt="Brewing coffee"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <p class="label">The Crew</p>
+    <h2>Meet Our Team</h2>
+    <div class="divider" style="margin:12px auto 0;"></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img class="team-avatar" src="user pic.jpg" alt="Raghvan"/>
+        <h4>Raghvan Popli</h4>
+        <p>Founder &amp; Head Barista</p>
+      </div>
+      <div class="team-card">
+        <img class="team-avatar" src="user pic.jpg" alt="Ansul"/>
+        <h4>Anshul Chouhan</h4>
+        <p>Roasting Specialist</p>
+      </div>
+      <div class="team-card">
+        <img class="team-avatar" src="user pic.jpg" alt="Ankush"/>
+        <h4>Ankush Nehra</h4>
+        <p>Kitchen &amp; Food Lead</p>
+      </div>
+      <div class="team-card">
+        <img class="team-avatar" src="user pic.jpg" alt="Simran"/>
+        <h4>Simranjit</h4>
+        <p>Community Manager</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="f-logo">BEST <span>Coffee</span></div>
+  <small>&copy; 2026 BEST Coffee, India. All rights reserved.</small>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

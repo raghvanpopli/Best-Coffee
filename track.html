@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEST Coffee — Track Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styleeval.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">BEST <span>Coffee</span></div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="track.html" class="active">Track Order</a>
+    <a href="login.html">Login</a>
+    <a href="checkout.html" class="cart-link">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<div class="tracking-page">
+
+  <div class="tracking-hero">
+    <p class="label">Live Status</p>
+    <h1>Track Your <em>Order</em></h1>
+    <p>Your order is being lovingly prepared. Here's where things stand.</p>
+  </div>
+
+  <div class="tracking-body">
+
+    <div class="order-card">
+      <h3>Order ID</h3>
+      <h2>#BEST-2026-0042</h2>
+      <div class="order-meta">
+        <span>Placed: <strong>Today, 12:34 PM</strong></span>
+        <span>Est. Ready: <strong>12:49 PM</strong></span>
+        <span>Status: <strong style="color:var(--accent-lt);">Preparing</strong></span>
+      </div>
+    </div>
+
+    <div class="track-steps">
+      <h3>Order Progress</h3>
+      <div class="steps-list">
+
+        <div class="step-item done">
+          <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+          <div class="step-content">
+            <h4>Order Confirmed</h4>
+            <p>We received your order and payment at 12:34 PM.</p>
+          </div>
+        </div>
+
+        <div class="step-item done">
+          <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+          <div class="step-content">
+            <h4>Sent to Kitchen</h4>
+            <p>Your order was sent to our baristas at 12:36 PM.</p>
+          </div>
+        </div>
+
+        <div class="step-item active">
+          <div class="step-icon"><i class="fa-solid fa-fire-burner"></i></div>
+          <div class="step-content">
+            <h4>Being Prepared</h4>
+            <p>Our team is crafting your order right now.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-bell"></i></div>
+          <div class="step-content">
+            <h4>Ready for Pickup</h4>
+            <p>We'll notify you when your order is at the counter.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <div class="step-content">
+            <h4>Enjoy!</h4>
+            <p>Order collected. Thank you for choosing BEST Coffee.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Back to menu -->
+    <div style="text-align:center; margin-top:36px;">
+      <a href="index.html#menu" class="btn btn-primary">
+        <i class="fa-solid fa-utensils"></i> Order More
+      </a>
+      <a href="index.html" class="btn btn-outline" style="margin-left:12px;">
+        Back to Home
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">BEST <span>Coffee</span></div>
+  <small>&copy; 2026 BEST Coffee, India. All rights reserved.</small>
+  <div class="f-links">
+    <a href="indexe.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

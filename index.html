@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEST Coffee — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styleeval.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">BEST <span>Coffee</span></div>
+  <nav id="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a href="booking.html">Reserve</a>
+    <a href="login.html">Login</a>
+    <a href="checkout.html" class="cart-link">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <small>Est. 2026 · Chitkara University, India</small>
+    <h1>Where Every Cup<br/><em>Tells a Story</em></h1>
+    <p>Hand-selected single-origin beans, slow-roasted to perfection.
+       A warm refuge for the senses in the heart of India.</p>
+    <div class="btn-group">
+      <a href="#menu"    class="btn btn-primary">Explore Menu</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="logo (2).png" alt="A steaming cup of premium coffee"/>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <img src="coffee beans.png" alt="Fresh coffee beans"/>
+  <div class="about-text">
+    <p class="label">Our Story</p>
+    <h2>Passion in Every Bean</h2>
+    <div class="divider"></div>
+    <p>At Coffee House in Chitkara University, we pride ourselves on being the
+       go-to destination for coffee lovers and conversation seekers alike.</p>
+    <p>Our beans trace their origins to the highlands of Ethiopia — where the
+       story of coffee began over six centuries ago.</p>
+    <div class="stats">
+      <div><strong>12+</strong><span>Years Roasting</span></div>
+      <div><strong>30+</strong><span>Bean Origins</span></div>
+      <div><strong>5K+</strong><span>Happy Guests</span></div>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec" id="menu">
+  <p class="label">Fresh &amp; Tasty</p>
+  <h2>Our Signature Menu</h2>
+  <div class="divider" style="margin:12px auto 0;"></div>
+
+  <!-- CONTROLS: search + filter -->
+  <div class="menu-controls">
+    <div class="menu-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="menuSearch" placeholder="Search items…"/>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="hot">Hot Coffee</button>
+      <button class="filter-tab" data-filter="cold">Cold Beverages</button>
+      <button class="filter-tab" data-filter="refresh">Refreshments</button>
+      <button class="filter-tab" data-filter="combo">Combos</button>
+      <button class="filter-tab" data-filter="burgers">Burgers</button>
+      <button class="filter-tab" data-filter="desserts">Desserts</button>
+    </div>
+  </div>
+
+  <div class="menu-grid">
+
+    <!-- HOT COFFEE -->
+    <div class="menu-card" data-category="hot">
+      <div class="menu-image">
+        <img src="coffee cup.jpg" alt="Hot Coffee"/>
+        <button class="fav-btn" data-item="Hot Coffee" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Hot Coffee</h3>
+        <p>Rich aromatic brews crafted for true coffee lovers.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Espresso</span><span>₹149</span>
+            <button onclick="openModal('Espresso',149,'A bold, concentrated shot of pure coffee perfection.','coffee cup.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Cappuccino</span><span>₹199</span>
+            <button onclick="openModal('Cappuccino',199,'Espresso topped with velvety steamed milk foam.','coffee cup.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Latte</span><span>₹229</span>
+            <button onclick="openModal('Latte',229,'Smooth espresso with creamy steamed milk.','coffee cup.jpg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLD BEVERAGES -->
+    <div class="menu-card" data-category="cold">
+      <div class="menu-image">
+        <img src="shakes.jpeg" alt="Cold Beverages"/>
+        <button class="fav-btn" data-item="Cold Beverages" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Cold Beverages</h3>
+        <p>Creamy, frothy cold coffees to keep you cool all day.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Cold Coffee</span><span>₹199</span>
+            <button onclick="openModal('Cold Coffee',199,'Chilled coffee blended smooth and frothy.','shakes.jpeg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Chocolate Shake</span><span>₹249</span>
+            <button onclick="openModal('Chocolate Shake',249,'Rich Belgian chocolate blended into a thick shake.','shakes.jpeg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Vanilla Frappe</span><span>₹299</span>
+            <button onclick="openModal('Vanilla Frappe',299,'Cool vanilla blended with ice and whipped cream.','shakes.jpeg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFRESHMENTS -->
+    <div class="menu-card" data-category="refresh">
+      <div class="menu-image">
+        <img src="lemonade.jpg" alt="Refreshments"/>
+        <button class="fav-btn" data-item="Refreshments" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Refreshments</h3>
+        <p>Fruit-forward icy drinks that revive with every sip.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Mojito</span><span>₹149</span>
+            <button onclick="openModal('Mojito',149,'Fresh mint and lime over crushed ice.','lemonade.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Lemon Iced Tea</span><span>₹129</span>
+            <button onclick="openModal('Lemon Iced Tea',129,'Freshly brewed tea chilled with a lemon twist.','lemonade.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Blue Lagoon</span><span>₹179</span>
+            <button onclick="openModal('Blue Lagoon',179,'Tropical blue curacao with lemonade and soda.','lemonade.jpg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIAL COMBOS -->
+    <div class="menu-card" data-category="combo">
+      <div class="menu-image">
+        <img src="italian combo.jpg" alt="Special Combos"/>
+        <button class="fav-btn" data-item="Special Combos" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Special Combos</h3>
+        <p>Delicious pairings curated by our expert baristas.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Pizza + Alfredo Pasta</span><span>₹499</span>
+            <button onclick="openModal('Pizza + Alfredo Pasta',499,'A cheesy Italian feast — best value combo.','italian combo.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Coffee + Brownie</span><span>₹349</span>
+            <button onclick="openModal('Coffee + Brownie',349,'Espresso paired with a warm fudge brownie.','italian combo.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Burger + Fries + Coke</span><span>₹499</span>
+            <button onclick="openModal('Burger + Fries + Coke',499,'Our classic gourmet burger with crispy fries and a refreshing coke.','italian combo.jpg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BURGERS & FRIES -->
+    <div class="menu-card" data-category="burgers">
+      <div class="menu-image">
+        <img src="burger.jpg" alt="Burgers"/>
+        <button class="fav-btn" data-item="Burgers" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Burgers &amp; Fries</h3>
+        <p>Gourmet bites for perfect coffee evenings.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Cheese Burger</span><span>₹199</span>
+            <button onclick="openModal('Cheese Burger',199,'Juicy patty with double cheese and fresh veggies.','burger.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>French Fries</span><span>₹99</span>
+            <button onclick="openModal('French Fries',99,'Crispy golden fries seasoned to perfection.','burger.jpg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Veg Burger</span><span>₹149</span>
+            <button onclick="openModal('Veg Burger',149,'A hearty plant-based patty with all the toppings.','burger.jpg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-card" data-category="desserts">
+      <div class="menu-image">
+        <img src="dessert.jpeg" alt="Desserts"/>
+        <button class="fav-btn" data-item="Desserts" title="Add to wishlist">♡</button>
+      </div>
+      <div class="card-body">
+        <h3>Desserts</h3>
+        <p>Indulgent treats that turn every visit into a journey.</p>
+        <div class="sub-menu">
+          <div class="sub-item">
+            <span>Chocolate Brownie</span><span>₹179</span>
+            <button onclick="openModal('Chocolate Brownie',179,'Warm fudgy brownie with a gooey chocolate centre.','dessert.jpeg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Cheesecake</span><span>₹249</span>
+            <button onclick="openModal('Cheesecake',249,'New York style cheesecake with a berry compote.','dessert.jpeg')">Details</button>
+          </div>
+          <div class="sub-item">
+            <span>Tiramisu</span><span>₹299</span>
+            <button onclick="openModal('Tiramisu',299,'Classic Italian layers of mascarpone and espresso.','dessert.jpeg')">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="checkout-area">
+    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+      Proceed to Checkout
+    </button>
+  </div>
+</section>
+
+<!-- ITEM DETAIL MODAL -->
+<div class="modal-overlay" id="itemModal">
+  <div class="modal-box">
+    <div class="modal-img">
+      <img id="modalImg" src="" alt="Item"/>
+    </div>
+    <div class="modal-body">
+      <h3 id="modalName"></h3>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalDesc"></p>
+      <div class="qty-row">
+        <label>Quantity</label>
+        <div class="qty-control">
+          <button onclick="changeModalQty(-1)">−</button>
+          <span id="modalQtyVal">1</span>
+          <button onclick="changeModalQty(1)">+</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-add-btn" onclick="confirmModalAdd()">Add to Cart</button>
+        <button class="modal-close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <p class="label">Kind Words</p>
+  <h2>What Our Guests Say</h2>
+  <div class="divider" style="margin:12px auto 0;"></div>
+  <div class="slider">
+    <div class="slider-track" id="sliderTrack">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Loved the French roast. Perfectly balanced and rich — the kind of cup you think about for days."</blockquote>
+        <div class="reviewer">
+          <img src="user pic.jpg" alt="Vishal Tyagi"/>
+          <div><cite>Vishal Tyagi</cite><small>Regular Guest</small></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Good espresso blend. Smooth and bold flavour — exactly what I need every morning."</blockquote>
+        <div class="reviewer">
+          <img src="user pic.jpg" alt="Shourya Sharma"/>
+          <div><cite>Shourya Sharma</cite><small>Coffee Enthusiast</small></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent quality! Fresh beans and a cozy space. Best coffee shop on campus, without question."</blockquote>
+        <div class="reviewer">
+          <img src="user pic.jpg" alt="Aryan Berwal"/>
+          <div><cite>Aryan Berwal</cite><small>First-Time Visitor</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-controls">
+    <button class="arrow-btn" onclick="changeSlide(-1)">&#8592;</button>
+    <div class="dots" id="dots"></div>
+    <button class="arrow-btn" onclick="changeSlide(1)">&#8594;</button>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <p class="label">Visual Menu</p>
+  <h2>Gallery</h2>
+  <div class="divider" style="margin:12px auto 0;"></div>
+  <div class="gallery-grid">
+    <div class="g-item tall"><img src="hot brew.jpg" alt="Hot brew"/><div class="caption">Hot Brew</div></div>
+    <div class="g-item"><img src="burger.jpg" alt="Burger"/><div class="caption">Burger</div></div>
+    <div class="g-item"><img src="lemonade.jpg" alt="Lemonade"/><div class="caption">Lemonade</div></div>
+    <div class="g-item"><img src="shakes.jpeg" alt="Cold Shake"/><div class="caption">Cold Shake</div></div>
+    <div class="g-item"><img src="italian combo.jpg" alt="Italian combo"/><div class="caption">Italian Combo</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-info">
+    <p class="label">Visit Us</p>
+    <h2>Come Say Hello</h2>
+    <div class="divider"></div>
+    <address>
+      <p><i class="fa-solid fa-location-dot"></i> Square 1, Chitkara University, Punjab, India</p>
+      <p><i class="fa-solid fa-phone"></i> +91 98150 09600</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@bestcoffee.in</p>
+      <p><i class="fa-solid fa-clock"></i> Mon–Fri 7am–9pm · Sat–Sun 8am–10pm</p>
+    </address>
+  </div>
+  <form class="contact-form" onsubmit="submitForm(event)">
+    <div class="field">
+      <label for="fname">Your Name</label>
+      <input type="text" id="fname" placeholder="Your name" required/>
+    </div>
+    <div class="field">
+      <label for="femail">Email</label>
+      <input type="email" id="femail" placeholder="you@example.com" required/>
+    </div>
+    <div class="field">
+      <label for="fmsg">Message</label>
+      <textarea id="fmsg" rows="4" placeholder="Write your message…" required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">BEST <span>Coffee</span></div>
+  <small>&copy; 2026 BEST Coffee, India. All rights reserved.</small>
+  <div class="f-links">
+    <a href="#home">Home</a>
+    <a href="about.html">About</a>
+    <a href="#menu">Menu</a>
+    <a href="booking.html">Reserve</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
