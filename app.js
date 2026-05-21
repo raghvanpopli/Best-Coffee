@@ -1,6 +1,4 @@
 
-
-//CART
 let cart = JSON.parse(localStorage.getItem("bestcoffee_cart")) || [];
 
 function saveCart() {
@@ -29,7 +27,6 @@ function removeItem(index) {
   if (typeof renderCart === "function") renderCart();
 }
 
-//TOAST
 function showToast(msg) {
   let t = document.getElementById("toast");
   if (!t) {
@@ -45,12 +42,10 @@ function showToast(msg) {
   t._timer = setTimeout(() => t.classList.remove("show"), 2800);
 }
 
-//NAVBAR
 function toggleMenu() {
   document.getElementById("navbar")?.classList.toggle("open");
 }
 
-// Scroll-spy
 (function scrollSpy() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("nav a");
@@ -67,7 +62,7 @@ function toggleMenu() {
   });
 })();
 
-//MENU SEARCH & FILTER
+
 function initMenuControls() {
   const searchInput = document.getElementById("menuSearch");
   const filterTabs  = document.querySelectorAll(".filter-tab");
@@ -99,7 +94,7 @@ function initMenuControls() {
   });
 }
 
-//ITEM DETAIL MODAL
+
 let modalQty = 1;
 
 function openModal(name, price, desc, imgSrc) {
@@ -132,12 +127,11 @@ function confirmModalAdd() {
   closeModal();
 }
 
-// Close on overlay click
+
 document.addEventListener("click", e => {
   if (e.target.id === "itemModal") closeModal();
 });
 
-//WISHLIST
 let wishlist = JSON.parse(localStorage.getItem("bestcoffee_wish")) || [];
 
 function toggleWish(btn, name) {
@@ -166,7 +160,7 @@ function initWishButtons() {
   });
 }
 
-//SLIDER (testimonials)
+
 function initSlider() {
   const track = document.getElementById("sliderTrack");
   const dotsC = document.getElementById("dots");
@@ -192,14 +186,13 @@ function initSlider() {
   setInterval(() => goTo(cur + 1), 4000);
 }
 
-//CONTACT FORM
+
 function submitForm(event) {
   event.preventDefault();
   showToast("Message sent successfully ☕");
   event.target.reset();
 }
 
-//CHECKOUT PAGE
 function renderCart() {
   const container = document.getElementById("cartItems");
   const totalEl   = document.getElementById("totalPrice");
@@ -255,7 +248,7 @@ function initCheckout() {
   });
 }
 
-//BOOKING PAGE
+
 function initBooking() {
   document.getElementById("bookingForm")?.addEventListener("submit", e => {
     e.preventDefault();
@@ -264,7 +257,6 @@ function initBooking() {
   });
 }
 
-//LOGIN / SIGNUP PAGE
 function initAuth() {
   const loginForm  = document.getElementById("loginForm");
   const signupForm = document.getElementById("signupForm");
@@ -294,7 +286,7 @@ function initAuth() {
   });
 }
 
-//BOOT
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   initMenuControls();
